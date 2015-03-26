@@ -27,6 +27,11 @@ div.point {
 .carousel-control span.glyphicon {
   color: black;
 }
+
+img.ss {
+  max-height: 400px;
+}
+
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
