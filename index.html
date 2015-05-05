@@ -25,22 +25,16 @@
               ga('send', 'pageview');
 
   </script>
-  <script>
-    $(document).ready(function() {
-      $.ajaxSetup({ cache: true });
-      $.getScript('//connect.facebook.net/ja_JP/all.js', function(){
-        FB.init({
-          appId: '651478274957587',
-          xfbml: true,
-          version: 'v2.3'
-        });     
-        $('#loginbutton,#feedbutton').removeAttr('disabled');
-        FB.getLoginStatus(updateStatusCallback);
-      });
-    });
-  </script>
   </head>
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=651476358291112";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <div class="container">
     <div class="jumbotron">
       <h1>Hide & Learn</h1>
@@ -118,13 +112,7 @@
       <p class="text-right">
         <a href="mailto:hide.and.learn@gmail.com">© kanahira</a>
       </p>
-      <div
-          class="fb-like"
-          data-share="true"
-          data-layout="button_count"
-          data-action="like"
-          data-show-faces="true">
-      </div>
+      <div class="fb-like" data-href="http://hideandlearn.github.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
     </footer>
   </div>
 
